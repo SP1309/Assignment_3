@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Form Container with Border -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/form_background"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/taskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Title"
+            android:layout_marginBottom="8dp"
+            android:padding="10dp"
+            android:background="@drawable/edittext_background" />
+
+        <EditText
+            android:id="@+id/taskDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Task Description"
+            android:padding="10dp"
+            android:background="@drawable/edittext_background" />
+
+        <EditText
+            android:id="@+id/taskDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Date (YYYY-MM-DD)"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_background"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none" />
+
+        <!-- Buttons Container to center both buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/saveTaskButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:padding="8dp"
+                android:text="Save N View"
+                android:textColor="@android:color/white"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/showUpcomingTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Show Tasks"
+                android:textColor="@android:color/white"
+                android:elevation="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
+
+</LinearLayout>
